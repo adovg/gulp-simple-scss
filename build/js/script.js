@@ -1,0 +1,1 @@
+function test(){alert("hello js");let e=firstNum+secondNum;console.console.log(e)}let firstNum=5,secondNum=10;test();

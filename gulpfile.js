@@ -93,7 +93,7 @@ function watch() {
     //watch SCSS
 gulp.watch('./src/css/**/*.scss', styles);  
 	//watch JS
-gulp.watch('./src/js/**/*.js', styles);    
+gulp.watch('./src/js/**/*.js', scripts);    
 	//wathc HTML
 gulp.watch('./*.html').on('change', browserSync.reload);
 //watch IMG

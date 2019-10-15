@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,KACC,WAAA,QADD,QAGG,WAAA","file":"style.css","sourcesContent":["body {\n\tbackground: #fafafa;\n\t\th1 {\n\t\t\tfont-style: italic;\n\t\t}\n}"]}
