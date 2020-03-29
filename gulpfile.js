@@ -13,7 +13,7 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
-
+const svg = require('gulp-svg-sprite');
 /*//Порядок подключения css файлов
 const cssFiles = [
 	'./src/css/main.css',
@@ -40,7 +40,7 @@ function styles() {
 	.pipe(concat('style.css'))
 	//Добавить префиксы
 	.pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+		overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
 	//Минификация CSS
@@ -76,6 +76,37 @@ function scripts() {
 // 	.pipe(gulp.dest('./build/img/'))	
 // });
 
+
+//svg sprite
+
+//  function sprite () {
+//     return gulp.src('./src/img/*.svg') // svg files for sprite
+//         .pipe(svgSprite({
+//                 mode: {
+//                     stack: {
+//                         sprite: "../sprite.svg"  //sprite file name
+//                     }
+//                 },
+//             }
+//         ))
+//         .pipe(gulp.dest('./build/img'));
+// };
+
+
+gulp.task('svg', function () {
+    return gulp.src('./src/img/*.svg') // svg files for sprite
+        .pipe(svg({
+                mode: {
+                    stack: {
+                        sprite: '../sprite.svg'  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(gulp.dest('./build/img'));
+});
+
+
 function img() {
 	return gulp.src('./src/img/**')
 	.pipe(imagemin({
@@ -105,6 +136,7 @@ function clean () {
 	return del(['build/*'])
 };
 
+gulp.task('sprite', svg);
 gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('del', clean);
