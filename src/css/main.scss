@@ -1,6 +1,57 @@
-body {
-	background: #fafafa;
-		h1 {
-			font-style: italic;
-		}
+@import 'reset.scss';
+@import 'media.scss';
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  font-size: 16px;
+  color: #000;
+}
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.container {
+  max-width: 100%;
+  min-width: 320px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.wrap {
+  min-width: 320px;
+  max-width: 1024px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+@import 'bloks/header.scss';
+@import 'bloks/pictures.scss';
+@import 'bloks/user.scss';
+@import 'bloks/profile.scss';
+@import 'bloks/gallery.scss';
+@import 'bloks/footer.scss';

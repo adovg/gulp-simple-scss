@@ -1,0 +1,17 @@
+.footer {
+	flex-shrink: 0;
+	background: grey;
+	//opacity: .3;
+	color: #000;	
+}
+
+.footer__menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+		& li {
+			margin: 0 10px 0 10px;
+		}
+}
