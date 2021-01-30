@@ -49,6 +49,20 @@ body {
   overflow: hidden;
 }
 
+.header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
 @import 'bloks/header.scss';
 @import 'bloks/pictures.scss';
 @import 'bloks/user.scss';

@@ -8,14 +8,23 @@
   	height: 93.5vh;
   	overflow: hidden;
     text-align: center;
-  	// height: 700px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	align-content: center;
 }
+
+  .header__list {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+  }
+
 .naw {
 	font-size: 30px;
 }
 .header__about {
-	align-content: center;
-	text-align: center;
 	font-weight: bold;
 	font-size: 1.5rem;
 }
@@ -33,14 +42,7 @@
 
 .header__content {
 	position: absolute;
-	top: 42%;
-	left: 17%;
 	color: #000;
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	// align-content: center;
-	
 }
 .header__list {
 	display: flex;
